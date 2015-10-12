@@ -1,60 +1,69 @@
 <!DOCTYPE HTML>
 
 <html>
-<head>
-<title>Bend Bash</title>
-<link href="./style.css" rel="stylesheet">
-</head>
-<body>
-  <div class="Header">
-    <a class="About" href="./about.html">About</a>
-    <a class="Logo" href="./index.html"><img src="./logo.png"></a>
+  <head>
+    <title>Bend Bash</title>
+    <script src='http://code.jquery.com/jquery-2.0.3.min.js'></script>
+    <script src='http://www.parsecdn.com/js/parse-1.4.2.min.js'></script>
+    <script src='query.js'></script>
+    <link href="./style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="Header">
+      <a class="About" href="./about.html">About</a>
+      <a class="Logo" href="./index.html"><img src="./logo.png"></a>
       <a class="Create_Event" href="./create.html">Create Event</a>
-  </div>
-  <div class="Event">
-  <h2>
-    <a href="./event.html">Basketball Tournament 13u</a>
-  </h2>
-<p>
-  5 on 5 pick up basketball game. Grab your friends and make a team!
-</p>
-<img class="Event_Picture" src="http://www.apjcc.org/clientuploads/recreation%20and%20wellness/photos/basketball%20kids%2001.JPG" alt="Kids Playing Basketball" />
-<hr></hr>
-</div>
-<div class="Event">
-<h2>
-  <a href="./event.html">Flash Dance Mob</a>
-</h2>
-<p>
-  Report in the main lobby at 4:30pm. When the music plays, dance!
-</p>
-<img class="Event_Picture" src="https://www.natcom.org/uploadedImages/CommunicationCurrents_Articles/Volume_8/flash_dance_mob.jpg" alt="Flash Dance Mob" />
-<hr></hr>
-</div>
-<div class="Event">
-<h2>
-  <a href="./event.html">Online Gaming Competition</a>
-</h2>
-<p>
-  Held in the teen room at 5:00pm. Come and experience online gaming with other individuals. Top 3 winners get candy of their choice!
-</p>
-<img class="Event_Picture" src="https://hongkongphooey.files.wordpress.com/2007/08/gngwc.jpg" alt="Online Gaming" />
-<hr></hr>
-</div>
-<div class="Event">
-<h2>
-  <a href="./event.html">Dodgeball Tournament</a>
-</h2>
-<p>
-  Held in the gymnasium at 5:30pm. Teams up to 10. Rules will be explained at time of event.
-</p>
-<img class="Event_Picture" src="http://blogs.elca.org/malaria/files/2012/03/CD-1.jpg" alt="Dodgeball" />
-<hr></hr>
-</div>
-<div class="Map">
-  <h2>
-    Where do the Events Take Place?
-  </h2>
-<iframe width="90%" height="600" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=BoysandGirlsClubSouthBend&key=AIzaSyC171AdFqV1cvpq3zcUt1m9Gkh3N4FXFZ4"></iframe>
-</div>
-</body>
+    </div>
+
+    <div id="events">
+      <!-- Our events from the database will be dynamically inserted here -->
+    </div>
+
+    <div class="Event">
+      <h2>
+        <a href="./event.html">Basketball Tournament 13u</a>
+      </h2>
+      <p>
+        5 on 5 pick up basketball game. Grab your friends and make a team!
+      </p>
+      <img class="Event_Picture" src="http://www.apjcc.org/clientuploads/recreation%20and%20wellness/photos/basketball%20kids%2001.JPG" alt="Kids Playing Basketball" />
+      <hr></hr>
+    </div>
+    <div class="Event">
+      <h2>
+        <a href="./event.html">Flash Dance Mob</a>
+      </h2>
+      <p>
+        Report in the main lobby at 4:30pm. When the music plays, dance!
+      </p>
+      <img class="Event_Picture" src="https://www.natcom.org/uploadedImages/CommunicationCurrents_Articles/Volume_8/flash_dance_mob.jpg" alt="Flash Dance Mob" />
+      <hr></hr>
+    </div>
+    <div class="Event">
+      <h2>
+        <a href="./event.html">Online Gaming Competition</a>
+      </h2>
+      <p>
+        Held in the teen room at 5:00pm. Come and experience online gaming with other individuals. Top 3 winners get candy of their choice!
+      </p>
+      <img class="Event_Picture" src="https://hongkongphooey.files.wordpress.com/2007/08/gngwc.jpg" alt="Online Gaming" />
+      <hr></hr>
+    </div>
+    <div class="Event">
+      <h2>
+        <a href="./event.html">Dodgeball Tournament</a>
+      </h2>
+      <p>
+        Held in the gymnasium at 5:30pm. Teams up to 10. Rules will be explained at time of event.
+      </p>
+      <img class="Event_Picture" src="http://blogs.elca.org/malaria/files/2012/03/CD-1.jpg" alt="Dodgeball" />
+      <hr></hr>
+    </div>
+    <div class="Map">
+      <h2>
+        Where do the Events Take Place?
+      </h2>
+      <iframe width="90%" height="600" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=BoysandGirlsClubSouthBend&key=AIzaSyC171AdFqV1cvpq3zcUt1m9Gkh3N4FXFZ4"></iframe>
+    </div>
+  </body>
+</html>

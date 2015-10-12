@@ -4,39 +4,46 @@
 <head>
   <link rel ="stylesheet" href="./style.css">
   <title>the bend bash</title>
+  <script src='http://code.jquery.com/jquery-2.0.3.min.js'></script>
+  <script src='http://www.parsecdn.com/js/parse-1.4.2.min.js'></script>
+  <script src='form.js'></script>
 </head>
 
 
 <body>
   <div class="Header">
-  <a class="About" href="./about.html">About</a>
-  <a class="Logo" href="./index.html"><img src="./logo.png"></a>
+    <a class="About" href="./about.html">About</a>
+    <a class="Logo" href="./index.html"><img src="./logo.png"></a>
     <a class="Create_Event" href="./create.html">Create Event</a>
-</div>
-<div class="Event">
-  <h2>
-      Create A Bash
-  </h2>
-  <form>
-Event Name<input type="text" name="=EventName">
-<br/>
-Event Time<input type="text" name="EventTime">
-<br/>
-Location
-<select>
-  <option value="BGC 1">BGC 1</option>
-  <option value="BGC 2">BGC 2</option>
-  <option value="BGC 3">BGC 3</option>
-  <option value="BGC 4">BGC 4</option>
-</select><br/>
-Description<input type="text" name="Description">
-<br/>
-Upload Picture<input type="file" name="datafile">
-
-<input type="submit" value="Submit">
-
-</form>
-</div>
+  </div>
+  <div class="Event">
+    <h2>
+        Create A Bash
+    </h2>
+    <form>
+      <!-- Event Name<input type="text" name="=EventName"> -->
+      Event Name<input type="text" name="EventName" id="name">
+      <br/>
+      <!-- Event Time<input type="text" name="EventTime"> -->
+      Event Time<input type="text" name="EventTime" id="time">
+      <br/>
+      Location
+      <!-- <select> -->
+      <select id="club" name="Select your B&G club">
+        <option value="BGC 1">BGC 1</option>
+        <option value="BGC 2">BGC 2</option>
+        <option value="BGC 3">BGC 3</option>
+        <option value="BGC 4">BGC 4</option>
+      </select><br/>
+      <!-- Description<input type="text" name="Description"> -->
+      Description<input type="text" name="Description" id="desc">
+      <br/>
+      <!-- Upload Picture<input type="file" name="datafile"> -->
+      Upload Picture<input type="file" name="datafile" id="datafile">
+      <!-- <input type="submit" value="Submit"> -->
+      <button id="submit" type="button">Submit</button>
+    </form>
+  </div>
 </body>
 
 
