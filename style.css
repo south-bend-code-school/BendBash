@@ -1,0 +1,101 @@
+body {
+  background-color: #69D2E7;
+}
+
+.Header {
+  background-color: #fa6900;
+}
+
+h1 {
+  color: white;
+  display:inline-block;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position:center;
+  border: 2px solid black;
+  margin-left: 39%;
+
+}
+
+.bj {
+  background-image: url('bj.jpg');
+}
+
+.cole {
+background-image: url('cole.jpg');
+}
+
+.cristoval {
+background-image: url('cris.jpg');
+}
+
+.Founders a {
+  font-size: 24px;
+}
+
+.Event_Picture {
+  max-height: 25%;
+  max-width: 37.5%;
+  height: auto;
+  width: auto;
+  border: solid;
+}
+
+.About {
+  float: left;
+  padding-left: 1em;
+  padding-top: 1.5em;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.Create_Event {
+  float: right;
+  padding-right: 1em;
+  padding-top: 1.5em;
+  font-size: 2em;
+  text-decoration: none;
+  background-color: #fa6900;
+}
+
+.Create_Event:hover {
+  float: right;
+  padding-right: 1em;
+  padding-top: 1.5em;
+  font-size: 2em;
+  text-decoration: none;
+  background-color: #69D2E7;
+}
+html {
+  font-family: fantasy;
+}
+
+.Event {
+  text-align: center;
+}
+
+.Logo {
+  margin-left: 37%;
+}
+
+.Map {
+  text-align: center;
+}
+
+.Mission_Founders {
+  text-align: center;
+}
+
+#Sports_Image {
+  display: block;
+  margin-left: 39%;
+}
