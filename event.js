@@ -31,6 +31,8 @@ $(function() {
                       object.get('time') +
                       '<h2>Event Description:</h2>' +
                       object.get('desc') +
+                      '<h2>Event Location:</h2>' +
+                      object.get('club') +
                       '</div>';
           $('#eventInfo').empty();
           $('#eventInfo').append(html);
