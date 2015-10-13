@@ -20,7 +20,7 @@ $(function() {
           var photoURL = object.get("photo").url();
           var html =  '<div class="Event">' +
                         '<h2>' +
-                          '<a href="./event.html">' + object.get('name') + '</a>' +
+                          '<a href="./event.html?id='+object.id+'">' + object.get('name') + '</a>' +
                         '</h2>' +
                         '<p>' +
                           object.get('desc') +
