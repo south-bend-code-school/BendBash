@@ -22,7 +22,7 @@ $(function() {
         var name = $('#name').val();
         var desc = $('#desc').val();
         var time = $('#time').val();
-        var club = $("#club option:selected").text();
+        var club = $("#club option:selected").val();
 
         bash.set('name', name);
         bash.set('desc', desc);

@@ -18,6 +18,24 @@ $(function() {
   function initMap(lat, lng, zoom){
     var mapOptions = {center: new google.maps.LatLng(lat, lng), zoom: zoom, mapTypeId: google.maps.MapTypeId.ROADMAP};
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    //Query the database for all events and map the location
+    var Bash = Parse.Object.extend("Bash");
+    var query = new Parse.Query(Bash);
+    query.descending("createdAt");
+
+    query.find({
+      success: function(results) {
+        // Do something with the returned Parse.Object values
+        for (var i = 0; i < results.length; i++) {
+          var object = results[i];
+          createMarker(object.get('club'), object.id);
+        }
+      },
+      error: function(error) {
+        alert("Error: " + error.code + " " + error.message);
+      }
+    });
   }
 
   function createMarker(address, id){
@@ -31,37 +49,37 @@ $(function() {
         var marker = new google.maps.Marker({map: map, position: latLng, id: id});
         // markers.push(marker);
 
-        google.maps.event.addListener(marker, 'click', function() {
-            var destination = Parse.Object.extend('Destination');
-            var query = new Parse.Query(destination);
-            query.equalTo("objectId", this.id)
-            query.find({
-              success: function(results){
-                for (var i = 0; i < results.length; i++) {
-                  var object = results[i];
-                  var html =  '<div class="infoWrapper">' +
-                              '<div class="destInfo">' +
-                              '<h2>Destination:</h2>' +
-                              object.get('name') +
-                              '<h2>Address:</h2>' +
-                              object.get('address') +
-                              '<h2>Cost of Programs:</h2>' +
-                              object.get('cost') +
-                              '<h2>Programs:</h2>' +
-                              object.get('programs') +
-                              '</div>' +
-                              '</div>';
-                  $('#info').empty();
-                  $('#info').append(html);
-                }
-              },
-              error: function(error) { alert('Error: ' + error.code + ' ' + error.message); }
-            });
-
-            $('#info').css('display', 'block');
-          });
+        // google.maps.event.addListener(marker, 'click', function() {
+        //     var destination = Parse.Object.extend('Destination');
+        //     var query = new Parse.Query(destination);
+        //     query.equalTo("objectId", this.id)
+        //     query.find({
+        //       success: function(results){
+        //         for (var i = 0; i < results.length; i++) {
+        //           var object = results[i];
+        //           var html =  '<div class="infoWrapper">' +
+        //                       '<div class="destInfo">' +
+        //                       '<h2>Destination:</h2>' +
+        //                       object.get('name') +
+        //                       '<h2>Address:</h2>' +
+        //                       object.get('address') +
+        //                       '<h2>Cost of Programs:</h2>' +
+        //                       object.get('cost') +
+        //                       '<h2>Programs:</h2>' +
+        //                       object.get('programs') +
+        //                       '</div>' +
+        //                       '</div>';
+        //           $('#info').empty();
+        //           $('#info').append(html);
+        //         }
+        //       },
+        //       error: function(error) { alert('Error: ' + error.code + ' ' + error.message); }
+        //     });
+        //
+        //     $('#info').css('display', 'block');
+        //   });
       } else {
-        console.log("Request failed.")
+        console.log("Request to add marker to map failed.")
       }
     });
   }
